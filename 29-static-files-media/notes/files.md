@@ -31,7 +31,7 @@ We need to start a new app that will represent the book management portion of
 our website. Move into your `django_lender` site directory (with the
 `manage.py`). Start a new app:
 
-    
+
 ```sh
 $ python manage.py startapp lender_books
 ```
@@ -40,7 +40,7 @@ We can begin by starting to build our model:
 
 _/.../lending_library/lender_books_
 
-    
+
 ```python
 from django.db import models
 import datetime
@@ -76,12 +76,12 @@ and the `FileField`. Images are just files that have special properties like
 
 When we construct these models, there are a few options we really want to
 think about. The first of these is
-[`upload_to`](https://docs.djangoproject.com/en/1.11/ref/models/fields/#django.db.models.FileField.upload_to).
+[`upload_to`](https://docs.djangoproject.com/en/2.0/ref/models/fields/#django.db.models.FileField.upload_to).
 
 ## Files and Media
 
 Here is our
-[`FileField`](https://docs.djangoproject.com/en/1.11/ref/models/fields/#filefield)
+[`FileField`](https://docs.djangoproject.com/en/2.0/ref/models/fields/#filefield)
 constructor (source code in `.../lib/python3.6/site-
 packages/django/db/models/fields/files.py`):
 
@@ -117,7 +117,7 @@ Calling `dirname()` again on that returned value strips the last path segement
 once more. That gives us the path to the directory that contains our
 configuration root, the project root:
 
-    
+
 ```sh
 $ tree .
 .
@@ -153,7 +153,7 @@ the Python standard library provides us with `os.path.join()`. What does
 
 _/.../lending_library/lending_library/settings.py_
 
-    
+
 ```python
 ...
  # Media file handling
@@ -185,7 +185,7 @@ add `media/*` to our `.gitignore`. Alternatively, we can add two lines,
 
 _.gitignore_
 
-    
+
 ```
 ...
 media
@@ -207,7 +207,7 @@ sense at first glance. It will complain about a security violation. The reason
 is that like us, Django uses `os.path.join()` to build the complete path. What
 happens when you join two paths that start with `/` using that function?
 
-    
+
 ```
 In [1]: import os
 In [2]: path1 = "/absolute/path/one"
@@ -227,7 +227,7 @@ something like this.
 
 _/.../django_lender/lending_library/lender_books_
 
-    
+
 ```python
 from django.db import models
 
@@ -242,7 +242,7 @@ management of them for us.
 ### Options for `upload_to`
 
 You can also pass strings into the
-[`upload_to`](https://docs.djangoproject.com/en/1.11/ref/models/fields/#django.db.models.FileField.upload_to)
+[`upload_to`](https://docs.djangoproject.com/en/2.0/ref/models/fields/#django.db.models.FileField.upload_to)
 field that are for formatting in date-time style.
 
 `cover_image = models.ImageField(upload_to='book_covers/%Y-%m-%d')`
@@ -259,7 +259,7 @@ used to assemble a relative pathname for the file to be written to. This
 example shows how to write each `Book` into a directory named for its own
 user.
 
-    
+
 ```python
 def user_directory_path(instance, filename):
     # file will be uploaded to MEDIA_ROOT/user_<id>/<filename>
@@ -294,7 +294,7 @@ For example, we can include all the URLs for views that correspond to our
 
 _/.../lending_library/lending_library/urls.py_
 
-    
+
 ```python
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
@@ -318,7 +318,7 @@ simple `Book` model for Django’s admin.
 
 _/.../lending_library/lender_books/admin.py_
 
-    
+
 ```python
 from django.contrib import admin
 
@@ -333,7 +333,7 @@ app to our `settings.py` so that Django itself knows about the models:
 
 _/.../lending_library/lending_library/settings.py_
 
-    
+
 ```python
 ...
  INSTALLED_APPS = (
@@ -390,7 +390,7 @@ development server and start up the Django shell:
 
 `$ python manage.py shell`
 
-    
+
 ```
 In [1]: from lender_books.models import Book
 
@@ -458,12 +458,12 @@ Let’s first change our `DEBUG=True` back. Can we navigate to our media file?
 
 ![alt text](_images/img_404.png)
 
-We need to look under Django’s docs to see how to deal with [serving files uploaded by a user during development](https://docs.djangoproject.com/en/1.11/howto/static-files/#serving-files-uploaded-by-a-user-during-development). Those docs
+We need to look under Django’s docs to see how to deal with [serving files uploaded by a user during development](https://docs.djangoproject.com/en/2.0/howto/static-files/#serving-files-uploaded-by-a-user-during-development). Those docs
 suggest to add this to `urls.py`:
 
 _/.../lending_library/lending_library/urls.py_
 
-    
+
 ```python
 from django.conf import settings
 from django.conf.urls import include, url
@@ -502,7 +502,7 @@ values don’t automatically change while you are testing.
 
 But remember that the settings you have are writable. You can alter them at
 test time. You may want to mess around with settings so that your test files
-go to `/tmp` or something like that. See the documentation on [overriding settings](https://docs.djangoproject.com/en/1.11/topics/testing/tools/#overriding-settings) for ideas on how to do this.
+go to `/tmp` or something like that. See the documentation on [overriding settings](https://docs.djangoproject.com/en/2.0/topics/testing/tools/#overriding-settings) for ideas on how to do this.
 
 When testing models that contain uploaded files as class attributes, you’ll
 need to be able to simulate that uploaded file. This is especially true if
@@ -514,7 +514,7 @@ sample file that you might want to upload. You’ll have to read in that
 existing sample file as a binary object, and use that to populate the
 `SimpleUploadedFile` instance.
 
-    
+
 ```python
 from django.core.files.uploadedfile import SimpleUploadedFile
 

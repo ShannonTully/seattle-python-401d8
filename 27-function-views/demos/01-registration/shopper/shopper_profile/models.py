@@ -2,13 +2,13 @@ from django.db import models
 from django.contrib.auth.models import User
 
 
-# class ActiveShopperProfileManager(models.Manager):
-#     """Custom manager for only active profiles."""
+class ActiveShopperProfileManager(models.Manager):
+    """Custom manager for only active profiles."""
 
-#     def get_queryset(self):
-#         """Limit the queryset to only profiles with active users."""
-#         all_profiles = super(ActiveShopperProfileManager, self).get_queryset()
-#         return all_profiles.filter(user__is_active=True)
+    def get_queryset(self):
+        """Limit the queryset to only profiles with active users."""
+        all_profiles = super(ActiveShopperProfileManager, self).get_queryset()
+        return all_profiles.filter(user__is_active=True)
 
 
 class ShopperProfile(models.Model):
@@ -19,15 +19,14 @@ class ShopperProfile(models.Model):
     zip_code = models.CharField(max_length=12, null=True, blank=True)
     cell = models.CharField(max_length=20, null=True, blank=True)
     home = models.CharField(max_length=20, null=True, blank=True)
-    is_active = models.BooleanField(default=True)
 
-    # @property
-    # def active(self):
-    #     """Whether the User of the profile is active or not."""
-    #     return self.user.is_active
+    @property
+    def is_active(self):
+        """Whether the User of the profile is active or not."""
+        return self.user.is_active
 
-    # objects = models.Manager()
-    # active = ActiveShopperProfileManager()
+    objects = models.Manager()
+    active = ActiveShopperProfileManager()
 
     def __str__(self):
         return self.user.username
