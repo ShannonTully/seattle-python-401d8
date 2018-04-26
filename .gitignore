@@ -5,6 +5,10 @@
 .vscode
 .DS_Store
 
+# Django
+MEDIA
+static
+
 ### JupyterNotebook ###
 .ipynb_checkpoints
 */.ipynb_checkpoints/*
