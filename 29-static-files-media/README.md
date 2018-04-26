@@ -2,6 +2,9 @@
 
 ## Learning Objectives
 - Students will learn about how Django handles and accesses files
+- Students will learn about signals and receivers in Django
+- Students will understand how Django handles static files in development vs production
+- Students will deepen their understanding of Django's templating tools and passing context
 
 ## Outline
 - Code Review
