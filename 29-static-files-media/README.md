@@ -1,5 +1,16 @@
 # ![cf](http://i.imgur.com/7v5ASc8.png) Class 29: Managing Static Files and Data
 
+## Daily Plan
+- Notes:
+    - Anything top of mind?
+
+- Code Review
+- Working with Static assets and Media files in Django
+- View Controllers
+- Development vs Production
+- Signals and Receivers (hooks)
+- Lab Preview
+
 ## Learning Objectives
 - Students will learn about how Django handles and accesses files
 - Students will learn about signals and receivers in Django
