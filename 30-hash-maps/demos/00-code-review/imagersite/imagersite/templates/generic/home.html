@@ -1,0 +1,10 @@
+{% extends 'generic/base.html' %} 
+
+{% block content %}
+
+<p>{{ message }}</p>
+
+{{ photos }}
+<img src="{{photos.image.url}}">
+
+{% endblock %}
