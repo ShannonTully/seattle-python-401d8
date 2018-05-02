@@ -7,6 +7,10 @@ server {
         root /home/ubuntu;
     }
 
+    location /media/ {
+        root /home/ubuntu/MEDIA;
+    }
+
     location / {
         proxy_pass http://unix:/home/ubuntu/simple-app.sock;
         proxy_set_header Host $host;

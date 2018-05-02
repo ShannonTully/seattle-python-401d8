@@ -1,5 +1,16 @@
 # ![cf](http://i.imgur.com/7v5ASc8.png) Class 33: Amazon Web Services RDS
 
+## Daily Plan
+- Notes:
+    - Anythinng top of mind?
+    - CC III Date Changed to Friday of week 9.
+    - CC III Presentation assignment
+
+- Code Review
+- Provisioning RDS
+- Wire RDS instance to Shopper
+- Lab Preview
+
 ## Learning Objectives
 - Students will learn to provision an RDS instance for their PostgreSQL deployment servers
 
