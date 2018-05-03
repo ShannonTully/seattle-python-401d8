@@ -1,5 +1,13 @@
 # ![cf](http://i.imgur.com/7v5ASc8.png) Class 34: Django Deployment
 
+## Daily Plan
+- Notes:
+    - Anything top of mind?
+
+- Code Review?
+- Deployment!
+- Lab Preview
+
 ## Learning Objectives
 - Students will learn how to fully deploy their Django applications using the AWS ecosystem
 

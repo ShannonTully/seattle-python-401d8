@@ -1,3 +1,25 @@
+# Week 7
+
+## Day 31-33
+Work individually on the whiteboard.
+Timebox yourself to 60 minutes.
+
+## Mock Interview Groups Day 34
+| Student  1       | Student     2      |
+| ------------- |:-------------:|
+| Keith Eckert (Python) | Caroline Cosgrove (Python) |
+| Austin Matterson (Python) | Tiger Hsu (.NET) |
+| Jay Adams (Python) | Jeremy Crawford (Python) |
+| Gene Pieterson (Python) | George Ceja (Python) |
+| Brandon Holderman (Python) | Brent Williams (.NET) |
+| Kevin Farrow (.NET) | Josh Taylor (.NET) |
+| Seokwon Kim (Python) | David Snowberger (Python) |
+| Shannon Tully (Python) | Adam Grandquist (Python)
+| Andrii Glukhyi (Python) | Patricia Raftery (Python) |
+| Beverly Pham (Python) | Philip Werner (.NET) |
+| Tyler Fishbone (Python) | Ramon Mendoza (Python) |
+| Steven Starwalt (Python) | {With a TA} |
+
 # Week5 Data Structure Groups
 | Student  1       | Student     2      |
 | ------------- |:-------------:|
