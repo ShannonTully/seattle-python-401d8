@@ -1,5 +1,15 @@
 # ![cf](http://i.imgur.com/7v5ASc8.png) Class 36: Class Based Views
 
+## Daily Plan
+- Notes:
+    - Anything top of mind?
+
+- Code Review
+- Class-based Views in Django
+- Multiple Inheritance and Mixins
+- Simple Form
+- Lab Preview
+
 ## Learning Objectives
 - Students will investigate Django’s Class-Based Views (CBV) and how they work
 - Students will begin implementing your own forms into your Django Imager app
