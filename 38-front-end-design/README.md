@@ -1,7 +1,9 @@
-# ![cf](http://i.imgur.com/7v5ASc8.png) Class 37: CBV & Django Security
+# ![cf](http://i.imgur.com/7v5ASc8.png) Class 38: Front-end Design
 
 ## Learning Objectives
-- Students will learn about how authentication and authorization work in a Django app
+- Students will deepen their understanding of front-end design patterns
+- Students will learn the basics of working with a pre-processed style language such as Sass
+- Students will learn how to integrate pre-processed stylesheets into a Django project
 
 ## Outline
 - Code Review
