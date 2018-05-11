@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="user-profile">
+  <p>{{profile.user.username}}'s Profile</p>
+  <table class="tbl-user-profile">
+    <tr>
+      <td>Location:</td>
+      {% if profile.location %}
+      <td>{{profile.location}}</td>
+      {% else %}
+      <td>N/A</td>
+      {% endif %}
+    </tr>
+    <tr>
+      <td>Website:</td>
+      {% if profile.website %}
+      <td>{{profile.website}}</td>
+      {% else %}
+      <td>N/A</td>
+      {% endif %}
+    </tr>
+    <tr>
+      <td>Camera:</td>
+      {% if profile.camera %}
+      <td>{{profile.camera}}</td>
+      {% else %}
+      <td>N/A</td>
+      {% endif %}
+    </tr>
+    <tr>
+      <td>Bio:</td>
+      {% if profile.bio %}
+      <td>{{profile.bio}}</td>
+      {% else %}
+      <td>N/A</td>
+      {% endif %}
+    </tr>
+    <tr>
+      <td>Albums:</td>
+      <td>{{public_albums.count}} Public <span>|</span> {{shared_albums.count}} Shared <span>|</span> {{private_albums.count}} Private</td>
+    </tr>
+    <tr>
+      <td>Photos:</td>
+      <td>{{public_photos.count}} Public <span>|</span> {{shared_photos.count}} Shared <span>|</span> {{private_photos.count}} Private</td>
+    </tr>
+  </table>
+
+  <a href="{% url "profile_edit" %}">Edit Profile</a>
+</section>
+{% endblock %}
