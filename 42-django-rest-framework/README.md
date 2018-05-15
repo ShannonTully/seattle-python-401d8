@@ -1,5 +1,15 @@
 # ![cf](http://i.imgur.com/7v5ASc8.png) Class 41: Django REST Framework
 
+## Daily Plan
+- Notes:
+    - Anything top of mind?
+    - GIX Competition?
+
+- Code Review
+- RESTful APIs
+- Django REST Framework
+- Lab Preview
+
 ## Learning Objectives
 - Students will have a basic understanding of a RESTful interface
 - Students will learn how to apply RESTful integrations into a Django application
