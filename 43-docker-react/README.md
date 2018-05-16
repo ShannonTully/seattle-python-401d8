@@ -1,5 +1,15 @@
 # ![cf](http://i.imgur.com/7v5ASc8.png) Class 43: Docker / React
 
+## Daily Plan
+- Notes:
+    - Anything top of mind?
+    - Final Projects
+
+- Code Review
+- Docker Discussion
+- Intro to React
+- Lab Preview
+
 ## Learning Objectives
 - Students will learn the basics of working with Docker containers
 - Students will understand the difference between client-side and server-side rendered applications
