@@ -27,7 +27,7 @@ App
 * should contain a number input for the user to limit the number of results to return
   * the number must be more than 0 and less than 100
   * `onSubmit` the form should make a request to reddit
-  * it should make a get request to `https://www.reddit.com/r/$%7Bthis.state.searchFormBoard%7D.json?limit=${this.state.searchFormLimit`
+  * it should make a get request to `https://www.reddit.com/r/${this.state.searchFormBoard}.json?limit=${this.state.searchFormLimit}`
     - _Note: `www` is **required** for the api call to complete successfully._
   * on success it should pass the results to the application state
   * on failure it should add a class to the form called error and turn the form's inputs borders red
