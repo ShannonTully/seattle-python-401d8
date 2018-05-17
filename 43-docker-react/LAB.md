@@ -8,7 +8,7 @@
 
 - Create a new repository calls `reddit-search`
 - Work in a branch called `react-intro`
-- Install your React scaffold using `npx install react-create-app <name of the app>`, and cd into that directory
+- Install your React scaffold using `npx install create-react-app <name of the app>`, and cd into that directory
 - Follow the below specification for building a Reddit Search Application:
 
 Create the following components and structure them according to the following diagram
