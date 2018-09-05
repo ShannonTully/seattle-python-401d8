@@ -1,8 +1,13 @@
 
 # Created by https://www.gitignore.io/api/venv,pydev,python,jupyternotebook
 
+.idea
 .vscode
 .DS_Store
+
+# Django
+MEDIA
+static
 
 ### JupyterNotebook ###
 .ipynb_checkpoints
@@ -121,7 +126,6 @@ include/
 # Window
 Include/
 Lib/
-Scripts/
 
 # Shared
 pyvenv.cfg

@@ -1,0 +1,23 @@
+{% extends "base.jinja2" %}
+
+{% block content %}
+<h1>Welcome to my list of entries</h1>
+
+{% if rand > 4 %}
+<h2>{{message}}</h2>
+{% else %}
+<h2>You're not going to see me</h2>
+{% endif %}
+
+<ul>
+  {% for entry in entries %}
+  <li>
+    <h3>{{entry.title}}</h3>
+    <p>({{entry.date}}) {{entry.author}}</p>
+    <p><a href="{{request.route_url('detail', id=entry.id)}}">view more</a></p>
+    <!-- href="/detail/<some_id>" -->
+  </li>
+  {% endfor %}
+</ul>
+{% endblock content %}
+

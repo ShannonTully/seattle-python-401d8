@@ -1,0 +1,15 @@
+[Unit]
+Description=gunicorn daemon for simple bookapp
+After=network.target
+
+[Service]
+Environment="Debug=False"
+Environment="DB_NAME={{ db_name }}"
+
+User=ubuntu
+Group=www-data
+WorkingDirectory=/home/ubuntu/simple-bookapp/src
+ExecStart=/home/ubuntu/ENV/bin/gunicorn --access-logfile - --workers 3 --bind unix:/home/ubuntu/simple-bookapp/src/bookapp.sock bookapp:application
+
+[Install]
+WantedBy=multi-user.target

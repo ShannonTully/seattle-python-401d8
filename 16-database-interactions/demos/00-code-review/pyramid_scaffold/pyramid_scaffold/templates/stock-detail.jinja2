@@ -1,0 +1,15 @@
+{% extends "base.jinja2" %}
+
+{% block content %}
+<ul id="stock detail">
+  <li id="volume">companyName: {{stock.companyName}}</li>
+  <li id="price">symbol: {{stock.symbol}}</li>
+  <li id="closing price">CEO: {{stock.CEO}}</li>
+  <li id="change">exchange: {{stock.exchange}}</li>
+  <li id="opening price">industry: {{stock.industry}}</li>
+  <li id="closing price">website: {{stock.website}}</li>
+  <li id="closing price">issueType: {{stock.issueType}}</li>
+  <li id="closing price">description: {{stock.description}}</li>
+  <li id="closing price">sector: {{stock.sector}}</li>
+</ul>
+{% endblock content %}

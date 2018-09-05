@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="{{request.static_url('learning_journal:static/normalize.css')}}">
+  <link rel="stylesheet" href="{{request.static_url('learning_journal:static/skeleton.css')}}">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Add a new Entry</h1>
+  <form id="entry-form">
+    <input type="text" name="title">
+    <textarea type="text" name="body"></textarea>
+    <input type="date" name="date">
+    <input type="text" name="author">
+    <input type="submit" name="submit" value="Add">
+  </form>
+</body>
+</html>

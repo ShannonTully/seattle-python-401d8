@@ -1,0 +1,4 @@
+Host simpleapp
+   Hostname <your ec2 public DNS>
+   User ubuntu
+   IdentityFile ~/.ssh/simple-app.pem

@@ -25,9 +25,9 @@ The "Ecommerce Customers" dataset represents data from a fictious store with fic
 	1. Fit a regression model on the training set
 	1. Print out the coefficients of the model
 	1. Make a prediction of the target variable from features dataframe
-	1. Calculate the Mean Average Error (using `sklearn.metrics` module)
+	1. Calculate the Mean Squared Error (using `sklearn.metrics` module)
 	1. Using Seaborn `distplot` show the histogram of the residuals - differences between the target variable and predicted target variable
-	1. Answer the main question: How should we allocate the engineering budget between website development and app development? 
+	1. Answer the main question: How should we allocate the engineering budget between website development and app development?
 	    - _Hint: look at the regression coefficients and contemplate their meaning_
 
 ### Submission

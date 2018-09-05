@@ -1,0 +1,28 @@
+[Unit]
+# Description of your application service
+Description=gunicorn daemon for simple bookapp
+
+# Tells the service to wait until after the network has started
+# If not present, gunicorn will try to start your service before the network is up and running
+# https://www.freedesktop.org/software/systemd/man/systemd.unit.html#Before=
+After=network.target
+
+[Service]
+# Defines the default use and group permissions that you need this service to operate with
+User=ubuntu
+Group=www-data
+
+# Working directory for your application
+WorkingDirectory=/home/ubuntu/simple-bookapp/src
+
+# Command to execute gunicorn, start the workers, and bind sockets for the app
+ExecStart=/usr/bin/gunicorn --access-logfile - --workers 3 --bind unix:/home/ubuntu/simple-bookapp/src/bookapp.sock bookapp:application
+
+[Install]
+# After running systemctl enable, a symlink /etc/systemd/system/multi-user.target.wants/foo.service
+# linking to the actual unit will be created.
+
+# It tells systemd to pull in the unit when starting multi-user.target.
+# The inverse systemctl disable will remove that symlink again.
+#https://www.freedesktop.org/software/systemd/man/systemd.unit.html#WantedBy=
+WantedBy=multi-user.target

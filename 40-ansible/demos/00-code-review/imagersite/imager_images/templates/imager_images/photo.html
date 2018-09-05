@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+{% if photo.image %}
+<div class="photo-view-div">
+<img src="{{ photo.image.url }}" class="photo-view">
+</div>
+{% endif %}
+{% endblock %}

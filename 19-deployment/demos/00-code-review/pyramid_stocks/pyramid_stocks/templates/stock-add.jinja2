@@ -1,0 +1,40 @@
+{% extends "base.jinja2" %}
+
+{% block content %}
+<form action="{{request.route_url('stock')}}" method="GET">
+  <input type="text" name="symbol" placeholder="MSFT">
+  <button type="submit">Search</button>
+</form>
+
+{% if data %}
+
+  <ul>
+      <li>{{data.companyName}}</li>
+      <li>{{data.symbol}}</li>
+      <li>{{data.exchange}}</li>
+      <li>{{data.website}}</li>
+      <li>{{data.CEO}}</li>
+      <li>{{data.industry}}</li>
+      <li>{{data.sector}}</li>
+      <li>{{data.issueType}}</li>
+      <li>{{data.description}}</li>
+  </ul>
+  
+  <form action="{{request.route_url('stock')}}" method="POST">
+    <input type="hidden" name="csrf_token" value="{{request.session.get_csrf_token()}}">
+    <input type="text" name="companyName" value="{{data.companyName}}" hidden required readonly>
+    <input type="text" name="symbol" value="{{data.symbol}}" hidden required readonly>
+    <input type="text" name="exchange" value="{{data.exchange}}" hidden readonly>
+    <input type="text" name="website" value="{{data.website}}" hidden readonly>
+    <input type="text" name="ceo" value="{{data.CEO}}" hidden readonly>
+    <input type="text" name="industry" value="{{data.industry}}" hidden readonly>
+    <input type="text" name="sector" value="{{data.sector}}" hidden readonly>
+    <input type="text" name="issueType" value="{{data.issueType}}" hidden readonly>
+    <input type="text" name="description" value="{{data.description}}" hidden readonly>
+    <button type="submit">Add to Portfolio</button>
+  </form>
+  <div>
+  {{data}}
+  </div>
+{% endif %}
+{% endblock content %}

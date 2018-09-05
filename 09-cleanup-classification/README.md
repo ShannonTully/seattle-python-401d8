@@ -1,5 +1,14 @@
 # ![cf](http://i.imgur.com/7v5ASc8.png) Class 09: Classifications
 
+## Daily Plan
+- Notes:
+    - Anything top of mind?
+
+- Code Review
+- Classification & Clustering
+- KNN & K-Means
+- Lab Preview
+
 ## Learning Objectives
 
 - Students will demonstrate the purpose of unsupervised classification
